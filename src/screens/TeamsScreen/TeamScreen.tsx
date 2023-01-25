@@ -1,11 +1,20 @@
 import React from "react";
-import { Text, View } from "react-native";
-import { Container } from "../FavoriteTeamScreen/styles";
+import { FlatList, ListRenderItemInfo } from "react-native";
+import { Container} from "./styles";
+import { Times, listaTimes} from "../../data/teamsList"
+import { ListaDeTimes } from "../../components/listaTimes/ListaTimes";
 
 const TeamScreen: React.FC = () => {
+  function renderItem({ item }: ListRenderItemInfo<Times>) {
+    return <ListaDeTimes {...item} />;
+  }
   return (
     <Container>
-      <Text>TeamScreen!</Text>
+      <FlatList
+        data={listaTimes}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+      />
     </Container>
   );
 };

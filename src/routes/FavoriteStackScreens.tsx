@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 const FavoriteStackScreens = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Favoritos" component={FavoriteTeamScreen} />
+      <Stack.Screen name="Favorito" component={FavoriteTeamScreen} />
       <Stack.Screen name="TeamScreen" component={TeamScreen} />
     </Stack.Navigator>
   );
