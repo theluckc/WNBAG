@@ -16,7 +16,7 @@ const FavoriteTeamScreen: React.FC = () => {
       <ButtonEscolhaSeuTime
         onPress={() => navigation.navigate("TeamScreen" as never)}
       >
-        <TextEscolhaSeuTime>Escolha um time</TextEscolhaSeuTime>
+        <TextEscolhaSeuTime >Escolha um time</TextEscolhaSeuTime>
       </ButtonEscolhaSeuTime>
       {escolheuTime ? (
         <TextSemTimeEscolhido>Time escolhidos</TextSemTimeEscolhido>

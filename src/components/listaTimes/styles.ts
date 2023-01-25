@@ -4,7 +4,7 @@ interface corDoTimeProps {
   color: string;
   }
 
-export const StyledViews = styled.View<corDoTimeProps>`
+export const StyledViews = styled.TouchableOpacity<corDoTimeProps>`
   background-color: ${(props: corDoTimeProps) => props.color};;
   flex-direction: row;
   height: 100px;
