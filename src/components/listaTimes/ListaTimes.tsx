@@ -1,13 +1,15 @@
 import React from "react";
 import { Image } from "react-native";
 import { Times } from "../../data/teamsList";
-import { StyledViews, Titulo, Logo } from "./styles";
+import { StyledViews, Titulo, Logo, ContainerLogo } from "./styles";
 
 export function ListaDeTimes({ title, color, image }: Times) {
   return (
     <StyledViews color={color}>
-      <Logo source={image} />
-        <Titulo>{title}</Titulo>
+      <ContainerLogo>
+        <Logo source={image} resizeMode="contain"/>
+      </ContainerLogo>
+      <Titulo>{title}</Titulo>
     </StyledViews>
   );
 }

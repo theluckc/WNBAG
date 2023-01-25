@@ -1,7 +1,7 @@
 import React from "react";
 import { FlatList, ListRenderItemInfo } from "react-native";
-import { Container} from "./styles";
-import { Times, listaTimes} from "../../data/teamsList"
+import { Container, BotaoSalvar, TextoBotao } from "./styles";
+import { Times, listaTimes } from "../../data/teamsList";
 import { ListaDeTimes } from "../../components/listaTimes/ListaTimes";
 
 const TeamScreen: React.FC = () => {
@@ -15,6 +15,9 @@ const TeamScreen: React.FC = () => {
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
+      <BotaoSalvar>
+      <TextoBotao>Salvar</TextoBotao>
+      </BotaoSalvar>
     </Container>
   );
 };
